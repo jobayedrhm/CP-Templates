@@ -1,28 +1,5 @@
-------------------nornal binary search(to find a element in a sorted array)-----------------
- void solve(){
-       int n,k;
-       cin>>n>>k;
-       
-       int a[n];
-       for(int i = 0;i<n;i++) cin>>a[i];
-        for(int i = 0;i<k;i++){
-        int x;
-        cin>>x;
-        int l = 0,r = n-1;
-        bool ok = false;
-        while(l<=r){
-            int m = (l+r)/2;
-            if(a[m]==x){
-                ok = true;
-                break;
-            }
-            if(a[m]<x) l = m + 1;
-            else r = m - 1 ;
-        }
-        if(ok) cout<<"YES"<<ln;
-        else cout<<"NO"<<ln;
-    }
- -----------------finding the lefotmost element(lees than or equal) of a given element-----------------
+
+ -----------------finding the leftmost element(lees than or equal) of a given element-----------------
  
      void solve(){
        int n,k;
@@ -59,6 +36,9 @@
         }
         cout<<r+1<<ln;
        }
+       // if we want to fine a element in a sorted array,we just have to make a little change
+       if(r<n && a[r]==x) cout<<"YES"<<ln;
+       else cout<<"NO"<<ln;
 
     }
 
