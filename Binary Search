@@ -22,6 +22,46 @@
         if(ok) cout<<"YES"<<ln;
         else cout<<"NO"<<ln;
     }
+ -----------------finding the lefotmost element(lees than or equal) of a given element-----------------
+ 
+     void solve(){
+       int n,k;
+       cin>>n>>k;
+       int a[n];
+       for(int i = 0;i<n;i++) cin>>a[i];
+       for(int i = 0;i<k;i++){
+        int x;
+        cin>>x;
+        int l = -1,r = n;
+        while(l+1<r){
+            int m = (l+r)/2;
+            if(a[m]<=x)l=m;
+            else r = m;
+        }
+        cout<<l+1<<ln;
+       }
 
+    }
+     -----------------finding the rightmost element (greater than or equal) of a given element-----------------
+      void solve(){
+       int n,k;
+       cin>>n>>k;
+       int a[n];
+       for(int i = 0;i<n;i++) cin>>a[i];
+       for(int i = 0;i<k;i++){
+        int x;
+        cin>>x;
+        int l = -1,r = n;
+        while(l+1<r){
+            int m = (l+r)/2;
+            if(a[m]<x)l=m;
+            else r = m;
+        }
+        cout<<r+1<<ln;
+       }
+
+    }
+
+    
 
 
