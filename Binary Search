@@ -1,4 +1,4 @@
-------------------nornal binary search(to find a element)-----------------
+------------------nornal binary search(to find a element in a sorted array)-----------------
  void solve(){
        int n,k;
        cin>>n>>k;
